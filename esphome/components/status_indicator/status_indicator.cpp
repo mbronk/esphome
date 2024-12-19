@@ -72,7 +72,7 @@ void StatusIndicator::loop() {
 
   if (has_network()) {
 #ifdef USE_WIFI
-    if (status.empty() && wifi::global_wifi_component->is_ap_enabled()) {
+    if (status.empty() && wifi::global_wifi_component->get_state() == wifi::WIFI_COMPONENT_STATE_AP) {
       status = "on_wifi_ap_enabled";
       this->status_.on_wifi_ap = 1;
     } else if (this->status_.on_wifi_ap) {
