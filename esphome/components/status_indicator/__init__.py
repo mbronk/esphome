@@ -34,7 +34,7 @@ CONF_TRIGGER_LIST = {
     "on_api_connected": True,
     "on_api_disconnected": True,
     "on_mqtt_connected": True,
-    "on_mgtt_disconnected": True,
+    "on_mqtt_disconnected": True,
     "on_custom_status": False,
 }
 CONF_WHICH = "which"
