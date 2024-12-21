@@ -12,14 +12,14 @@ class StatusTrigger;
 
 union StatusFlags {
   struct {
-    int on_error : 1;
-    int on_warning : 1;
-    int on_network : 1;
-    int on_api : 1;
-    int on_mqtt : 1;
-    int on_wifi_ap : 1;
+    uint16_t on_error : 1;
+    uint16_t on_warning : 1;
+    uint16_t on_network : 1;
+    uint16_t on_api : 1;
+    uint16_t on_mqtt : 1;
+    uint16_t on_wifi_ap : 1;
   };
-  int setter = 0;
+  uint16_t setter = 0;
 };
 
 class StatusIndicator : public Component {
